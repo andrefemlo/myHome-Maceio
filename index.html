@@ -33,10 +33,12 @@
             </div>
 
             <ul class="list-none flex gap-6">
-                <li><a href="#sobre" class="hover:text-brand-hover leading-none font-bold">Sobre</a></li>
-                <li><a href="#funcionamento" class="hover:text-brand-hover leading-none font-bold">Como Funciona</a>
+                <li><a href="#sobre" class="hover:text-brand-hover leading-none font-bold max-md:hidden">Sobre</a></li>
+                <li><a href="#funcionamento" class="hover:text-brand-hover leading-none font-bold max-md:hidden">Como
+                        Funciona</a>
                 </li>
-                <li><a href="#cases" class="hover:text-brand-hover leading-none font-bold">Nosso Trabalho</a></li>
+                <li><a href="#cases" class="hover:text-brand-hover leading-none font-bold max-md:hidden">Nosso
+                        Trabalho</a></li>
                 <li><a href="https://form.jotform.com/250255195591662" target="_blank" class="btn">FAÇA SEU
                         ORÇAMENTO</a></li>
             </ul>
@@ -69,8 +71,8 @@
 
         <!-- Projetos -->
         <section>
-            <div class="container py-20 mt-10 flex flex-row justify-between items-stretch gap-10">
-                <div class="flex flex-col justify-start items-start gap-10 max-w-1/2 w-full">
+            <div class="container py-20 mt-10 flex flex-col md:flex-row justify-between items-stretch gap-10">
+                <div class="flex flex-col justify-start items-start gap-10 md:max-w-[50%] w-full">
                     <div class="pb-10">
                         <span
                             class="text-brand before:content-[''] before:w-6 before:bg-brand before:h-0.5 flex items-center gap-2 font-bold">
@@ -115,7 +117,7 @@
                         </p> -->
                     </div>
                 </div>
-                <div class="flex flex-col justify-start items-start gap-10 max-w-1/2 w-full">
+                <div class="flex flex-col justify-start items-start gap-10 md:max-w-[50%] w-full">
                     <div class="card flex flex-col justify-center">
                         <img class="rounded-sm" src="/assets/webp/IMG_0809.webp" alt="Sala e Cozinha Planejadas"
                             loading="lazy" width="1912" height="1080">
@@ -156,11 +158,13 @@
         <!-- Acompanhe o seu projeto! -->
         <section>
             <div class="container py-20 flex flex-col justify-between items-start gap-10">
-                <div class="content max-w-[80%]">
+                <div class="content md:max-w-[80%]">
                     <span
                         class="text-brand before:content-[''] before:w-6 before:bg-brand before:h-0.5 flex items-center gap-2 font-bold">Acompanhe
                         o seu projeto!</span>
-                    <h2 class="text-balance text-6xl leading-tight mt-3 mb-6">Acompanhe todo o processo de produção dos
+                    <h2 class="md:text-balance md:text-6xl leading-tight mt-3 mb-6">Acompanhe todo o processo de
+                        produção
+                        dos
                         seus móveis
                     </h2>
                     <p class="text-xl leading-loose text-balance">
@@ -169,7 +173,8 @@
                         projeto dos seus sonhos.
                     </p>
                 </div>
-                <div class="numbers w-full grid grid-cols-3 gap-6 mt-10 justify-between items-stretch">
+                <div
+                    class="numbers w-full grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 justify-between items-stretch">
                     <div
                         class="card rounded-md border border-solid border-[#E6D8CC] p-10 flex items-start justify-start gap-6 flex-col">
                         <div class="icon grid place-content-center mb-3">
@@ -228,8 +233,8 @@
 
         <!-- Sobre Nós -->
         <section>
-            <div class="container py-20 flex flex-row justify-between items-center gap-10">
-                <div class="content max-w-[50%]">
+            <div class="container py-20 flexflex-col md:flex-row justify-between items-center gap-10">
+                <div class="content md:max-w-[50%]">
                     <span
                         class="text-brand before:content-[''] before:w-6 before:bg-brand before:h-0.5 flex items-center gap-2 font-bold">Sobre
                         Nós</span>
@@ -261,7 +266,7 @@
                     </a>
 
                 </div>
-                <div class="content max-w-[50%]">
+                <div class="content max-md:pt-14 md:max-w-[50%]">
                     <img src="/assets/webp/IMG_3672.webp" alt="Fábrica da MyHome" class="rounded-md" width="810"
                         height="1080">
                 </div>
@@ -270,9 +275,10 @@
 
         <!-- Cards -->
         <section>
-            <div class="container numbers grid grid-cols-3 gap-10 justify-between items-center py-20 pt-0">
+            <div
+                class="container numbers grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 justify-between items-center py-20 pt-0">
                 <div
-                    class="card rounded-md border border-solid border-[#E6D8CC] p-10 flex items-start justify-start gap-6 flex-col">
+                    class="card rounded-md border w-full border-solid border-[#E6D8CC] p-10 flex items-center justify-center md:items-start md:justify-start gap-6 flex-col">
                     <div class="icon grid place-content-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#eb6608"
                             viewBox="0 0 256 256">
@@ -281,10 +287,10 @@
                             </path>
                         </svg>
                     </div>
-                    <h3>5 Estrelas no Google.</h3>
+                    <h3 class="text-2xl">5 Estrelas no Google.</h3>
                 </div>
                 <div
-                    class="card rounded-md border border-solid border-[#E6D8CC] p-10 flex items-start justify-start gap-6 flex-col">
+                    class="card rounded-md border w-full border-solid border-[#E6D8CC] p-10 flex items-center justify-center md:items-start md:justify-start gap-6 flex-col">
                     <div class="icon grid place-content-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#eb6608"
                             viewBox="0 0 256 256">
@@ -293,10 +299,10 @@
                             </path>
                         </svg>
                     </div>
-                    <h3>5 Anos de Garantia.</h3>
+                    <h3 class="text-2xl">5 Anos de Garantia.</h3>
                 </div>
                 <div
-                    class="card rounded-md border border-solid border-[#E6D8CC] p-10 flex items-start justify-start gap-6 flex-col">
+                    class="card rounded-md border w-full border-solid border-[#E6D8CC] p-10 flex items-center justify-center md:items-start md:justify-start gap-6 flex-col">
                     <div class="icon grid place-content-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#eb6608"
                             viewBox="0 0 256 256">
@@ -305,7 +311,7 @@
                             </path>
                         </svg>
                     </div>
-                    <h3>Pagamento Facilitado.</h3>
+                    <h3 class="text-2xl">Pagamento Facilitado.</h3>
                 </div>
             </div>
         </section>
@@ -314,16 +320,16 @@
 
 
 
-    <footer class="bg-deep-blue w-full">
+    <footer>
         <div
-            class="container py-20 flex flex-row justify-between border-t border-b border-solid border-[#D9D9D6] border-l-0 border-r-0">
-            <div class="max-w-[50%]">
+            class="container py-20 flex flex-col gap-10 md:flex-row justify-between border-t border-b border-solid border-[#D9D9D6] border-l-0 border-r-0">
+            <div class="md:max-w-[50%]">
                 <h2 class="pb-4">Dê o ponta-pé inicial para o seu sonho.</h2>
                 <a href="https://form.jotform.com/250255195591662" target="_blank"
                     class="text-4xl font-title font-semibold text-brand underline italic">Fale com nosso
                     atendiento.</a>
             </div>
-            <div class="max-w-[30%] flex flex-col items-start gap-10">
+            <div class="md:max-w-[30%] flex flex-col items-start gap-10">
                 <div class="flex flex-col items-start gap-4">
                     <h3>Jatiúca, Maceió - AL</h3>
                     <p>Galeria Portofino - Av. Alm. Álvaro Calheiros, 422 - Loja 02 - 57035-558</p>
@@ -333,9 +339,28 @@
                     <a href="mailto:contato@myhomemaceio.com.br"
                         class="text-2xl font-title font-medium text-brand underline italic">contato@myhomemaceio.com.br</a>
                 </div>
+                <div class="flex flex-col items-start gap-1">
+                    <p>Acompanhe nossas redes</p>
+                    <div class="flex gap-4 items-center">
+                        <a href="https://www.instagram.com/myhomemaceio/" target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#eb6608"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
+                                </path>
+                            </svg></a>
+                        <a href="https://www.facebook.com/myhomemaceio/?locale=pt_BR" target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#eb6608"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z">
+                                </path>
+                            </svg></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <p class="text-center p-2 text-white">©2025 Hexlab - Todos os direitos reservados.</p>
+        <p class="text-center p-2">©2025 Hexlab - Todos os direitos reservados.</p>
     </footer>
 </body>
 <!-- <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script> -->
