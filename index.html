@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" class="max-w-screen overflow-x-hidden scroll-smooth">
+<html lang="pt-BR" class="lenis max-w-screen overflow-x-hidden scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
     <meta name="description" content="My Home Maceió - Planejados para fazer você sentir!">
     <title>My Home Maceió - Planejados para fazer você sentir!</title>
 
-    <link rel="icon" type="image/x-icon" href="/assets/svg/ico.svg" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
 
     <!-- Css -->
     <link rel="stylesheet" href="./css/main.css" />
@@ -18,7 +18,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="My Home Maceió - Planejados para fazer você sentir!" />
     <meta property="og:description" content="My Home Maceió - Planejados para fazer você sentir!" />
-    <meta property="og:image" content="https://myhomemaceio.com.br/assets/svg/ico.svg" />
+    <meta property="og:image" content="https://myhomemaceio.com.br/assets/favicon.ico" />
     <meta property="og:url" content="https://myhomemaceio.com.br" />
     <meta property="og:type" content="website" />
 </head>
@@ -35,7 +35,7 @@
             <ul class="list-none flex gap-6">
                 <li class="hidden md:inline"><a href="#sobre"
                         class="hover:text-brand-hover leading-none font-bold">Sobre</a></li>
-                <li class="hidden md:inline"><a href="#funcionamento"
+                <li class="hidden md:inline"><a href="#acompanhe"
                         class="hover:text-brand-hover leading-none font-bold">Como
                         Funciona</a>
                 </li>
@@ -68,12 +68,12 @@
             </div>
             <div>
                 <img src="/assets/webp/hero.webp" alt="Uma família feliz em sua linda sala."
-                    class="w-screen h-[80dvh] object-cover object-center" loading="lazy" width="2000" height="1333">
+                    class="w-screen md:h-[80dvh] object-cover object-center" loading="lazy" width="2000" height="1333">
             </div>
         </section>
 
         <!-- Projetos -->
-        <section>
+        <section id="cases">
             <div class="container py-20 mt-10 flex flex-col md:flex-row justify-between items-stretch gap-10">
                 <div class="flex flex-col justify-start items-start gap-10 md:max-w-[50%] w-full">
                     <div class="pb-10">
@@ -163,16 +163,14 @@
         </section>
 
         <!-- Acompanhe o seu projeto! -->
-        <section>
+        <section id="acompanhe">
             <div class="container py-20 flex flex-col justify-between items-start gap-10">
                 <div class="content md:max-w-[80%]">
                     <span
                         class="text-brand before:content-[''] before:w-6 before:bg-brand before:h-0.5 flex items-center gap-2 font-bold">Acompanhe
                         o seu projeto!</span>
-                    <h2 class="md:text-balance md:text-6xl leading-tight mt-3 mb-6">Acompanhe todo o processo de
-                        produção
-                        dos
-                        seus móveis
+                    <h2 class="md:text-balance md:text-6xl leading-tight mt-3 mb-6">
+                        Acompanhe todo o processo de produção dos seus móveis
                     </h2>
                     <p class="text-xl leading-loose text-balance">
                         Você acompanha cada etapa do seu pedido direto na fábrica. É segurança, transparência e
@@ -238,8 +236,104 @@
             </div>
         </section>
 
-        <!-- Sobre Nós -->
+        <!-- Cards -->
         <section>
+            <div class="container py-20 pt-0">
+                <div class="content">
+                    <span
+                        class="text-brand before:content-[''] before:w-6 before:bg-brand before:h-0.5 flex items-center gap-2 font-bold">Benefícios</span>
+                    <h2 class="md:text-balance md:text-6xl leading-tight mt-3 mb-12">Entenda
+                        porque a MyHome
+                        Maceió é <span class="text-blue">a melhor opção do mercado!</span>
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-between items-stretch">
+
+                    <div
+                        class="card rounded-md border w-full border-solid border-[#E6D8CC] p-10 flex items-center justify-center md:items-start md:justify-start gap-6 flex-col">
+                        <div class="icon grid place-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#eb6608"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H72v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V208ZM152,88a31.91,31.91,0,0,0-24,10.86A32,32,0,0,0,72,120c0,36.52,50.28,62.08,52.42,63.16a8,8,0,0,0,7.16,0C133.72,182.08,184,156.52,184,120A32,32,0,0,0,152,88Zm-24,78.93c-13.79-7.79-40-26.75-40-46.93a16,16,0,0,1,32,0,8,8,0,0,0,16,0,16,16,0,0,1,32,0C168,140.19,141.79,159.15,128,166.93Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl text-center md:text-start">Mais de 12 anos de história.</h3>
+                    </div>
+
+                    <div
+                        class="card rounded-md border w-full border-solid border-[#E6D8CC] p-10 flex items-center justify-center md:items-start md:justify-start gap-6 flex-col">
+                        <div class="icon grid place-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#eb6608"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M216,72H180.92c.39-.33.79-.65,1.17-1A29.53,29.53,0,0,0,192,49.57,32.62,32.62,0,0,0,158.44,16,29.53,29.53,0,0,0,137,25.91a54.94,54.94,0,0,0-9,14.48,54.94,54.94,0,0,0-9-14.48A29.53,29.53,0,0,0,97.56,16,32.62,32.62,0,0,0,64,49.57,29.53,29.53,0,0,0,73.91,71c.38.33.78.65,1.17,1H40A16,16,0,0,0,24,88v32a16,16,0,0,0,16,16v64a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V136a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72ZM149,36.51a13.69,13.69,0,0,1,10-4.5h.49A16.62,16.62,0,0,1,176,49.08a13.69,13.69,0,0,1-4.5,10c-9.49,8.4-25.24,11.36-35,12.4C137.7,60.89,141,45.5,149,36.51Zm-64.09.36A16.63,16.63,0,0,1,96.59,32h.49a13.69,13.69,0,0,1,10,4.5c8.39,9.48,11.35,25.2,12.39,34.92-9.72-1-25.44-4-34.92-12.39a13.69,13.69,0,0,1-4.5-10A16.6,16.6,0,0,1,84.87,36.87ZM40,88h80v32H40Zm16,48h64v64H56Zm144,64H136V136h64Zm16-80H136V88h80v32Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl text-center md:text-start">Centenas de sonhos realizados.</h3>
+                    </div>
+
+                    <div
+                        class="card rounded-md border w-full border-solid border-[#E6D8CC] p-10 flex items-center justify-center md:items-start md:justify-start gap-6 flex-col">
+                        <div class="icon grid place-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#eb6608"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M120,103.2V176a8,8,0,0,0,16,0V103.2a40,40,0,1,0-16,0ZM128,40a24,24,0,1,1-24,24A24,24,0,0,1,128,40ZM240,176c0,31.18-57.71,48-112,48S16,207.18,16,176c0-7.74,3.81-19.13,22-29.41,12.26-6.94,29.12-12.27,48.77-15.42A8,8,0,1,1,89.27,147c-17.54,2.82-33,7.63-43.42,13.55C37.05,165.5,32,171.14,32,176c0,13.36,36.52,32,96,32s96-18.64,96-32c0-4.86-5.05-10.5-13.85-15.49-10.46-5.92-25.88-10.73-43.42-13.55a8,8,0,1,1,2.54-15.79c19.65,3.15,36.51,8.48,48.77,15.42C236.19,156.87,240,168.26,240,176Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl text-center md:text-start">Loja física em ótima localização</h3>
+                    </div>
+
+                    <!-- Selo do Compromisso MyHome -->
+                    <div
+                        class="card rounded-md border w-full border-solid border-[#E6D8CC] p-10 flex items-center justify-center md:items-start md:justify-start gap-6 flex-col">
+                        <div class="icon grid place-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#eb6608"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl text-center md:text-start">Acompanhamento do seu pedido.</h3>
+                    </div>
+
+                    <div
+                        class="card rounded-md border w-full border-solid border-[#E6D8CC] p-10 flex items-center justify-center md:items-start md:justify-start gap-6 flex-col">
+                        <div class="icon grid place-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#eb6608"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl text-center md:text-start">Até 5 anos de garantia.</h3>
+                    </div>
+
+                    <div
+                        class="card rounded-md border w-full border-solid border-[#E6D8CC] p-10 flex items-center justify-center md:items-start md:justify-start gap-6 flex-col">
+                        <div class="icon grid place-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#eb6608"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M192,116a12,12,0,1,1-12-12A12,12,0,0,1,192,116ZM152,64H112a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm96,48v32a24,24,0,0,1-24,24h-2.36l-16.21,45.38A16,16,0,0,1,190.36,224H177.64a16,16,0,0,1-15.07-10.62L160.65,208h-57.3l-1.92,5.38A16,16,0,0,1,86.36,224H73.64a16,16,0,0,1-15.07-10.62L46,178.22a87.69,87.69,0,0,1-21.44-48.38A16,16,0,0,0,16,144a8,8,0,0,1-16,0,32,32,0,0,1,24.28-31A88.12,88.12,0,0,1,112,32H216a8,8,0,0,1,0,16H194.61a87.93,87.93,0,0,1,30.17,37c.43,1,.85,2,1.25,3A24,24,0,0,1,248,112Zm-16,0a8,8,0,0,0-8-8h-3.66a8,8,0,0,1-7.64-5.6A71.9,71.9,0,0,0,144,48H112A72,72,0,0,0,58.91,168.64a8,8,0,0,1,1.64,2.71L73.64,208H86.36l3.82-10.69A8,8,0,0,1,97.71,192h68.58a8,8,0,0,1,7.53,5.31L177.64,208h12.72l18.11-50.69A8,8,0,0,1,216,152h8a8,8,0,0,0,8-8Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl text-center md:text-start">Melhor custo-benefício do mercado.</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Nós -->
+        <section id="sobre">
             <div class="container py-20 flex flex-col md:flex-row justify-between items-center gap-10">
                 <div class="content md:max-w-[50%]">
                     <span
@@ -275,8 +369,8 @@
 
                 </div>
                 <div class="content pt-14 md:pt-0 md:max-w-[50%]">
-                    <img src="/assets/webp/IMG_3672.webp" alt="Fábrica da MyHome" class="rounded-md" width="810"
-                        height="1080">
+                    <img src="/assets/webp/IMG_3672.webp" alt="Fábrica da MyHome" class="rounded-md" loading="lazy"
+                        width="810" height="1080">
                 </div>
             </div>
         </section>
@@ -323,6 +417,7 @@
                 </div>
             </div>
         </section>
+
 
     </main>
 
@@ -371,7 +466,7 @@
         <p class="text-center p-2">©2025 Hexlab - Todos os direitos reservados.</p>
     </footer>
 </body>
-<!-- <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script> -->
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
 
 <!-- <script src="./js/plugins.js" defer></script> -->
 <!-- <script src="./js/all.js" defer></script> -->
