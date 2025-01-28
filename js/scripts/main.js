@@ -107,29 +107,29 @@
 // window.onload = verificarCookiesAceitos
 
 // Acordeão
-document.addEventListener("DOMContentLoaded", function () {
-  var accordion = document.querySelectorAll(".accordion");
+// document.addEventListener("DOMContentLoaded", function () {
+//   var accordion = document.querySelectorAll(".accordion");
 
-  accordion.forEach((el) => {
-    var accordionItems = el.querySelectorAll(".accordion-item");
+//   accordion.forEach((el) => {
+//     var accordionItems = el.querySelectorAll(".accordion-item");
 
-    accordionItems.forEach(function (item) {
-      var header = item.querySelector(".accordion-header");
+//     accordionItems.forEach(function (item) {
+//       var header = item.querySelector(".accordion-header");
 
-      header.addEventListener("click", function () {
-        var currentActiveItem = item.classList.contains("active");
+//       header.addEventListener("click", function () {
+//         var currentActiveItem = item.classList.contains("active");
 
-        accordionItems.forEach(function (el) {
-          el.classList.remove("active");
-        });
+//         accordionItems.forEach(function (el) {
+//           el.classList.remove("active");
+//         });
 
-        if (!currentActiveItem) {
-          item.classList.add("active");
-        }
-      });
-    });
-  });
-});
+//         if (!currentActiveItem) {
+//           item.classList.add("active");
+//         }
+//       });
+//     });
+//   });
+// });
 
 // Menu mobile;
 // function openMobileSidebar() {

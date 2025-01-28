@@ -188,7 +188,7 @@
                     <span
                         class="text-brand before:content-[''] before:w-6 before:bg-brand before:h-0.5 flex items-center gap-2 font-bold">Acompanhe
                         o seu projeto!</span>
-                    <h2 class="md:text-balance md:text-6xl leading-tight mt-3 mb-6">
+                    <h2 class="md:text-balance md:text-6xl leading-tight md:leading-tight mt-3 mb-6">
                         Acompanhe todo o processo de fabricação dos seus móveis.
                     </h2>
                     <p class="text-xl leading-loose text-balance">
@@ -260,7 +260,7 @@
                 <div class="content">
                     <span
                         class="text-brand before:content-[''] before:w-6 before:bg-brand before:h-0.5 flex items-center gap-2 font-bold">Benefícios</span>
-                    <h2 class="md:text-balance md:text-6xl leading-tight mt-3 mb-12">Entenda
+                    <h2 class="md:text-balance md:text-6xl md:leading-tight mt-3 mb-12">Entenda
                         porque a MyHome
                         Maceió é <span class="text-blue">a melhor opção do mercado!</span>
                     </h2>
@@ -351,14 +351,14 @@
         </section>
 
         <!-- Sobre Nós -->
-        <section id="sobre">
-            <div class="container py-20 flex flex-col md:flex-row justify-between items-center gap-10">
-                <div class="content md:max-w-[50%]">
+        <section id="sobre" class="py-20">
+            <div class="container flex flex-col md:flex-row justify-between items-stretch gap-10 h-full">
+                <div class="content md:max-w-[50%] md:h-full md:sticky md:top-28">
                     <span
                         class="text-brand before:content-[''] before:w-6 before:bg-brand before:h-0.5 flex items-center gap-2 font-bold">Sobre
                         Nós</span>
-                    <h2 class="sm:text-balance text-3xl sm:text-4xl md:text-6xl mt-3 mb-1">Somos a <span
-                            class="text-blue">MyHome Maceió</span>
+                    <h2 class="sm:text-balance text-3xl sm:text-4xl md:text-6xl mt-3 mb-1 md:leading-tight">Somos a
+                        <span class="text-blue">MyHome Maceió</span>
                     </h2>
                     <p class="text-lg text-balance">
                         Somos parte do grupo k1, <span class="text-brand"> o maior grupo moveleiro da América
@@ -390,6 +390,10 @@
                     <img src="/assets/webp/IMG_3672.webp" alt="Fábrica da MyHome" class="rounded-md" loading="lazy"
                         width="810" height="1080">
                 </div>
+            </div>
+            <div class="container">
+                <img src="/assets/webp/foto-aerea-grupo-k1.webp" alt="Vista Aérea da fábrica do Grupo K1"
+                    class="w-full mt-6 rounded-md" loading="lazy" width="1440" height="502">
             </div>
         </section>
 
@@ -448,7 +452,7 @@
                 <h2 class="pb-4">Dê o ponta-pé inicial para o seu sonho.</h2>
                 <a href="https://wa.me/+5582996114022?text=Olá! Vim pelo site e gostaria de fazer um orçamento!"
                     target="_blank" class="text-4xl font-title font-semibold text-brand underline italic">Fale com nosso
-                    atendiento.</a>
+                    atendimento.</a>
             </div>
             <div class="md:max-w-[30%] flex flex-col items-start gap-10">
                 <div class="flex flex-col items-start gap-4">
@@ -457,8 +461,8 @@
                 </div>
                 <div class="flex flex-col items-start gap-1">
                     <p>Se preferir, fale por e-mail</p>
-                    <a href="mailto:contato@myhomemaceio.com.br"
-                        class="text-2xl font-title font-medium text-brand underline italic">contato@myhomemaceio.com.br</a>
+                    <a href="mailto:myhomemaceio@gmail.com"
+                        class="text-2xl font-title font-medium text-brand underline italic">myhomemaceio@gmail.com</a>
                 </div>
                 <div class="flex flex-col items-start gap-1">
                     <p>Acompanhe nossas redes</p>
@@ -488,5 +492,26 @@
 
 <!-- <script src="./js/plugins.js" defer></script> -->
 <!-- <script src="./js/all.js" defer></script> -->
+<script defer>
+    window.addEventListener('load', function () {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://unpkg.com/lenis@1.1.13/dist/lenis.css';
+        document.head.appendChild(link);
+    });
+
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+    })
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+</script>
 
 </html>
