@@ -484,7 +484,7 @@
             <div class="md:max-w-[50%] w-full" id="orcamento">
                 <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation"
                     novalidate>
-                    <input type="hidden" name="access_key" value="3feacfd8-7699-428b-86cd-7d678224deb0" />
+                    <input type="hidden" name="access_key" value="c1576b3e-8418-4984-b26d-08883670cdc3" />
                     <input type="hidden" name="subject" value="Novo formulário" />
                     <input type="checkbox" name="botcheck" id="" style="display: none;" />
 
@@ -572,6 +572,11 @@
 
 <!-- <script src="./js/plugins.js" defer></script> -->
 <script>
+    var phoneMask = IMask(
+        document.getElementById('phone'), {
+        mask: '(00) 00000-0000'
+    }
+    );
     (function () {
         "use strict";
         /*
@@ -646,13 +651,6 @@
         });
     })();
 
-</script>
-<script>
-    var phoneMask = IMask(
-        document.getElementById('phone'), {
-        mask: '(00) 00000-0000'
-    }
-    );
 </script>
 <script defer>
     window.addEventListener('load', function () {
