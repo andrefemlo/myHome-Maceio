@@ -486,6 +486,7 @@
                     novalidate>
                     <input type="hidden" name="access_key" value="c1576b3e-8418-4984-b26d-08883670cdc3" />
                     <input type="hidden" name="subject" value="Novo formulário" />
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
                     <input type="checkbox" name="botcheck" id="" style="display: none;" />
 
                     <div class="flex mb-6 space-x-4">
@@ -493,7 +494,7 @@
                             <label for="fname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Nome</label>
                             <input type="text" name="name" id="first_name" placeholder="Primeiro Nome" required
                                 class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-brand focus:border-brand-hover" />
-                            <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                            <div class="empty-feedback hidden invalid-feedback text-red-400 text-sm mt-1">
                                 Insira o seu primeiro nome.
                             </div>
                         </div>
@@ -502,7 +503,7 @@
                                 class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Sobrenome</label>
                             <input type="text" name="last_name" id="lname" placeholder="Sobrenome" required
                                 class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-brand focus:border-brand-hover" />
-                            <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                            <div class="empty-feedback hidden invalid-feedback text-red-400 text-sm mt-1">
                                 Insira o seu sobrenome
                             </div>
                         </div>
@@ -514,7 +515,7 @@
                                 e-mail</label>
                             <input type="email" name="email" id="email" placeholder="nome@gmail.com" required
                                 class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-brand focus:border-brand-hover" />
-                            <div class="empty-feedback text-red-400 text-sm mt-1">
+                            <div class="empty-feedback hidden text-red-400 text-sm mt-1">
                                 Insira o seu endereço de e-mail.
                             </div>
                             <div class="invalid-feedback text-red-400 text-sm mt-1">
@@ -528,7 +529,7 @@
                             <input type="text" name="phone" id="phone" placeholder="(99) 99999-9999" required
                                 class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-brand focus:border-brand-hover" />
 
-                            <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                            <div class="empty-feedback hidden invalid-feedback text-red-400 text-sm mt-1">
                                 Por favor insira o seu número de contato.
                             </div>
                         </div>
@@ -541,7 +542,7 @@
                             placeholder="Fale sobre os cômodos e o que você espera do seu novo lar"
                             class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-brand focus:border-brand-hover"
                             required></textarea>
-                        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                        <div class="empty-feedback hidden invalid-feedback text-red-400 text-sm mt-1">
                             Por favor, fale um pouco sobre o seu projeto.
                         </div>
                     </div>
@@ -570,13 +571,108 @@
 </body>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("form");
+
+    form.addEventListener("submit", function (event) {
+        let isValid = true;
+
+        // Selecionar campos
+        const firstName = document.getElementById("first_name");
+        const lastName = document.getElementById("lname");
+        const email = document.getElementById("email");
+        const phone = document.getElementById("phone");
+        const message = document.getElementById("message");
+
+        // Função para validar email
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Validação dos campos
+        if (firstName.value.trim() === "") {
+            showError(firstName, "Insira o seu primeiro nome.");
+            isValid = false;
+        } else {
+            clearError(firstName);
+        }
+
+        if (lastName.value.trim() === "") {
+            showError(lastName, "Insira o seu sobrenome.");
+            isValid = false;
+        } else {
+            clearError(lastName);
+        }
+
+        if (!isValidEmail(email.value.trim())) {
+            showError(email, "Por favor, insira um endereço de e-mail válido.");
+            isValid = false;
+        } else {
+            clearError(email);
+        }
+
+        if (phone.value.trim() === "" || phone.value.length < 14) {
+            showError(phone, "Por favor, insira um número de telefone válido.");
+            isValid = false;
+        } else {
+            clearError(phone);
+        }
+
+        if (message.value.trim() === "") {
+            showError(message, "Por favor, fale um pouco sobre o seu projeto.");
+            isValid = false;
+        } else {
+            clearError(message);
+        }
+
+        // Impede o envio se houver erro
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+
+    // Funções auxiliares para exibir/limpar erro
+    function showError(input, message) {
+        const errorDiv = input.nextElementSibling;
+        errorDiv.textContent = message;
+        errorDiv.classList.add("text-red-400");
+    }
+
+    function clearError(input) {
+        const errorDiv = input.nextElementSibling;
+        errorDiv.textContent = "";
+        errorDiv.classList.remove("text-red-400");
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    let phoneInput = document.getElementById("phone");
+
+    phoneInput.addEventListener("input", function (e) {
+        let value = e.target.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+        let formattedValue = "";
+
+        if (value.length > 10) {
+            formattedValue = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7, 11)}`;
+        } else if (value.length > 6) {
+            formattedValue = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(6, 10)}`;
+        } else if (value.length > 2) {
+            formattedValue = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+        } else if (value.length > 0) {
+            formattedValue = `(${value}`;
+        }
+
+        e.target.value = formattedValue;
+    });
+});
+
+</script>
+
+
 <!-- <script src="./js/plugins.js" defer></script> -->
 <script>
-    var phoneMask = IMask(
-        document.getElementById('phone'), {
-        mask: '(00) 00000-0000'
-    }
-    );
     (function () {
         "use strict";
         /*
