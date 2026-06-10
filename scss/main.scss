@@ -12,6 +12,10 @@
     &.main {
         @apply py-5 px-7;
     }
+
+    &.white {
+        @apply bg-white text-brand;
+    }
 }
 
 .accordion {

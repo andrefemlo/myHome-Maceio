@@ -12,11 +12,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        'white': '#FFFFFF',
+        'white': '#e7e7e7',
         'white-100': '#F4F4F4',
-        'brand': '#eb6608',
-        'brand-hover': '#c35100',
-        'blue': '#0090d1',
+        'brand': '#002837',
+        'brand-hover': '#00283780',
+        'blue': '#002837',
         'black': '#2C2C2C',
         'black-100': '#444647',
         'green-whatspp': '#25D366',
